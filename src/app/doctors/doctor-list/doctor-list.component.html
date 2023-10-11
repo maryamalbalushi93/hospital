@@ -1,0 +1,58 @@
+<div class="container-fluid">
+  <h1 class="text-center">Doctors List</h1>
+
+  <!-- Button to toggle Add Doctor Form -->
+  <div class="d-flex justify-content-end mb-3">
+    <button class="btn btn-success" (click)="showAddDoctorForm = true">
+      <i class="fas fa-plus"></i> Add Doctor
+    </button>
+  </div>
+  
+  <!-- Add Doctor Form -->
+  <div *ngIf="showAddDoctorForm" class="my-4">
+    <form (submit)="addDoctor()">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name" name="name" [(ngModel)]="newDoctor.name" required>
+      </div>
+      <div class="form-group">
+        <label for="specialization">Specialization</label>
+        <input type="text" class="form-control" id="specialization" name="specialization" [(ngModel)]="newDoctor.specialization" required>
+      </div>
+      <div class="form-group">
+        <label for="doctorContact">Doctor Contact</label>
+        <input type="text" class="form-control" id="doctorContact" name="doctorContact" [(ngModel)]="newDoctor.doctorContact" required>
+      </div>
+     
+      <button type="submit" class="btn btn-success">Add Doctor</button>
+      <button type="button" class="btn btn-secondary" (click)="showAddDoctorForm = false">Cancel</button>
+    </form>
+  </div>
+
+  <!-- List of Doctors -->
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Specialization</th>
+        <th>Doctor Contact</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let doctor of doctors">
+        <td>{{ doctor.name }}</td>
+        <td>{{ doctor.specialization }}</td>
+        <td>{{ doctor.doctorContact }}</td>
+        <td>
+          <button class="btn btn-info btn-sm mr-2" (click)="viewDetails(doctor.id)">
+            <i class="fas fa-info-circle"></i>
+          </button>
+          <button class="btn btn-danger btn-sm" (click)="deleteDoctor(doctor.id)">
+            <i class="fas fa-trash"></i>
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

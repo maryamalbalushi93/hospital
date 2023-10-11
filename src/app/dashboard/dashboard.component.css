@@ -1,0 +1,35 @@
+.boxes {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .box {
+    text-align: center;
+    padding: 20px;
+    border-radius: 15px; /* Adds rounded corners */
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 200px;
+    background-color: #fff; /* Set a background color */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+  }
+  
+  .box:hover {
+    background-color: #137d67;
+    color: #fff;
+  }
+  
+  .box i {
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .number {
+    font-size: 24px;
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+  }
+  

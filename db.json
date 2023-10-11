@@ -1,0 +1,46 @@
+{
+  "assistants": [
+    {
+      "id": 1,
+      "name": "maryam mohammed",
+      "department": "Front Desk"
+    },
+    {
+      "id": 2,
+      "name": "Reem Usama",
+      "department": "Billing"
+    }
+  ],
+  "doctors": [
+    {
+      "id": 1,
+      "name": "Dr. John Doe",
+      "specialization": "Cardiology",
+      "doctorContact": "123-456-7890"
+    },
+    {
+      "id": 2,
+      "name": "Dr. Jane Smith",
+      "specialization": "Pediatrics",
+      "doctorContact": "555-555-5555"
+    }
+  ],
+  "patients": [
+    {
+      "id": 1,
+      "name": "Alice",
+      "age": 30,
+      "condition": "Fever",
+      "note": "None",
+      "contact": "111-111-1111"
+    },
+    {
+      "name": "Maryam Albalushi",
+      "age": 29,
+      "condition": "sick",
+      "note": " na",
+      "contact": "9876532",
+      "id": 2
+    }
+  ]
+}

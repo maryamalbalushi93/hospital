@@ -1,0 +1,76 @@
+<div class="container">
+  <h2 class="text-center mb-4">Patients List</h2>
+
+  <!-- Button to toggle Add Patient Form -->
+  <div class="d-flex justify-content-end mb-3">
+    <button class="btn btn-success" (click)="showAddPatientForm = true">
+      <i class="fas fa-plus"></i> Add Patient
+    </button>
+  </div>
+
+  <!-- Add Patient Form -->
+  <div *ngIf="showAddPatientForm" class="my-4">
+    <form (submit)="addPatient()">
+      <!-- Form fields for patient information -->
+      <!-- Adjust as needed -->
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name" name="name" [(ngModel)]="newPatient.name" required>
+      </div>
+      <div class="form-group">
+        <label for="age">Age</label>
+        <input type="number" class="form-control" id="age" name="age" [(ngModel)]="newPatient.age" required>
+      </div>
+      <div class="form-group">
+        <label for="condition">Condition</label>
+        <input type="text" class="form-control" id="condition" name="condition" [(ngModel)]="newPatient.condition" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="note">Note</label>
+        <textarea class="form-control" id="note" name="note" [(ngModel)]="newPatient.note" required></textarea>
+      </div>
+      
+      <div class="form-group">
+        <label for="contact">Contact</label>
+        <input type="text" class="form-control" id="contact" name="contact" [(ngModel)]="newPatient.contact" required>
+      </div>
+      <!-- Add other form fields for age, condition, note, contact as needed -->
+      <!-- Remember to adjust newPatient object in the component as well -->
+      
+      <button type="submit" class="btn btn-success">Add Patient</button>
+      <button type="button" class="btn btn-secondary" (click)="showAddPatientForm = false">Cancel</button>
+    </form>
+  </div>
+
+  <!-- List of Patients -->
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Condition</th>
+        <th>Note</th>
+        <th>Contact</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let patient of patients">
+        <td>{{ patient.name }}</td>
+        <td>{{ patient.age }}</td>
+        <td>{{ patient.condition }}</td>
+        <td>{{ patient.note }}</td>
+        <td>{{ patient.contact }}</td>
+        <td>
+          <button class="btn btn-info btn-sm mr-2" (click)="viewDetails(patient.id)">
+            <i class="fas fa-info-circle"></i>
+          </button>
+          <button class="btn btn-danger btn-sm" (click)="deletePatient(patient.id)">
+            <i class="fas fa-trash"></i>
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,19 @@
+
+@import "~@fortawesome/fontawesome-free/css/all.css";
+
+.container {
+    margin-top: 20px;
+  }
+  .table th, .table td {
+    vertical-align: middle;
+  }
+  
+  .table th {
+    background-color: #19ad95;
+    color: white;
+  }
+  
+  .table th, .table td {
+    border: 1px solid #dee2e6;
+  }
+  

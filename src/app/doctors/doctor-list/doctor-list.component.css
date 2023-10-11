@@ -1,0 +1,44 @@
+@import "~@fortawesome/fontawesome-free/css/all.css";
+
+.container {
+    margin-top: 20px;
+  }
+  /* doctor-list.component.css */
+
+.container-fluid.bg-primary {
+  padding: 20px;
+}
+
+
+@import "~@fortawesome/fontawesome-free/css/all.css";
+
+
+.container-fluid.bg-primary h1 {
+  margin: 0;
+  font-size: 2rem;
+  text-align: center;
+  background-color: #dee2e6;
+}
+
+.add-doctor-button-container {
+  text-align: center;
+}
+
+/* Style for the table */
+.table th, .table td {
+  vertical-align: middle;
+}
+
+.table th {
+  background-color: #19ad95;
+  color: white;
+}
+
+.table th, .table td {
+  border: 1px solid #dee2e6;
+}
+
+/* Style for action buttons */
+.action-buttons button {
+  margin-right: 5px;
+}
